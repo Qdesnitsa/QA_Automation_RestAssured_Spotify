@@ -31,3 +31,4 @@ documentation: https://developer.spotify.com/documentation/general/guides/author
 
 p.s.<br>
 *POJO classes creator: https://www.jsonschema2pojo.org/
+*https://projectlombok.org/

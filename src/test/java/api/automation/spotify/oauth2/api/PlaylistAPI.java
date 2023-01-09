@@ -1,6 +1,7 @@
 package api.automation.spotify.oauth2.api;
 
 import api.automation.spotify.oauth2.pojo.Playlist;
+import api.automation.spotify.oauth2.util.ConfigLoader;
 import io.restassured.response.Response;
 
 import static api.automation.spotify.oauth2.api.Route.PLAYLISTS;
@@ -11,12 +12,12 @@ public class PlaylistAPI {
 
     //documentation: https://developer.spotify.com/documentation/web-api/reference/#/operations/create-playlist
     public static Response post(Playlist requestPlaylist) {
-        return RestResource.post(USERS + "/31e5cr3v7kcgdthtkg5llzymuzl4" + PLAYLISTS, getToken(), requestPlaylist);
+        return RestResource.post(USERS + "/" + ConfigLoader.getInstance().getUserId() + PLAYLISTS, getToken(), requestPlaylist);
     }
 
     //documentation: https://developer.spotify.com/documentation/web-api/reference/#/operations/create-playlist
     public static Response post(String token, Playlist requestPlaylist) {
-        return RestResource.post(USERS + "/31e5cr3v7kcgdthtkg5llzymuzl4" + PLAYLISTS, token, requestPlaylist);
+        return RestResource.post(USERS + "/" + ConfigLoader.getInstance().getUserId() + PLAYLISTS, token, requestPlaylist);
     }
 
     //documentation: https://developer.spotify.com/documentation/web-api/reference/#/operations/get-playlist
