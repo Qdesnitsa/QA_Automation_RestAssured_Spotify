@@ -1,17 +1,17 @@
-package api.automation.spotify.oauth2;
+package api.automation.spotify.oauth2.pojo;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class ExternalUrls__1 {
+public class ExternalUrl {
     @JsonProperty("spotify")
     private String spotify;
 
-    public ExternalUrls__1() {
+    public ExternalUrl() {
     }
 
-    public ExternalUrls__1(String spotify) {
+    public ExternalUrl(String spotify) {
         this.spotify = spotify;
     }
 
@@ -24,4 +24,5 @@ public class ExternalUrls__1 {
     public void setSpotify(String spotify) {
         this.spotify = spotify;
     }
+
 }

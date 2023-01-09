@@ -1,4 +1,4 @@
-package api.automation.spotify.oauth2;
+package api.automation.spotify.oauth2.pojo;
 
 import java.util.List;
 
