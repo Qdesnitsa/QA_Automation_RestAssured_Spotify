@@ -30,5 +30,10 @@ documentation: https://developer.spotify.com/documentation/general/guides/author
   - client_secret = from p.2
 
 p.s.<br>
-*POJO classes creator: https://www.jsonschema2pojo.org/
-*https://projectlombok.org/
+mvn clean test <br>
+allure serve target/allure-results <br>
+*POJO classes creator: https://www.jsonschema2pojo.org/ <br>
+*Lombok docs: https://projectlombok.org/ <br>
+*Allure docs: https://docs.qameta.io/allure-report/ <br>
+https://github.com/allure-framework/allure-java <br>
+https://github.com/rest-assured/rest-assured/wiki

@@ -2,6 +2,7 @@ package api.automation.spotify.oauth2.api;
 
 import api.automation.spotify.oauth2.pojo.Playlist;
 import api.automation.spotify.oauth2.util.ConfigLoader;
+import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
 import static api.automation.spotify.oauth2.api.Route.PLAYLISTS;
@@ -11,6 +12,7 @@ import static api.automation.spotify.oauth2.api.TokenManager.getToken;
 public class PlaylistAPI {
 
     //documentation: https://developer.spotify.com/documentation/web-api/reference/#/operations/create-playlist
+    @Step
     public static Response post(Playlist requestPlaylist) {
         return RestResource.post(USERS + "/" + ConfigLoader.getInstance().getUserId() + PLAYLISTS, getToken(), requestPlaylist);
     }
