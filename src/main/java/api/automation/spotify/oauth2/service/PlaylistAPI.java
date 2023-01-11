@@ -1,13 +1,13 @@
-package api.automation.spotify.oauth2.api;
+package api.automation.spotify.oauth2.service;
 
 import api.automation.spotify.oauth2.pojo.Playlist;
 import api.automation.spotify.oauth2.util.ConfigLoader;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
-import static api.automation.spotify.oauth2.api.Route.PLAYLISTS;
-import static api.automation.spotify.oauth2.api.Route.USERS;
-import static api.automation.spotify.oauth2.api.TokenManager.getToken;
+import static api.automation.spotify.oauth2.util.Route.PLAYLISTS;
+import static api.automation.spotify.oauth2.util.Route.USERS;
+import static api.automation.spotify.oauth2.service.TokenManager.getToken;
 
 public class PlaylistAPI {
 

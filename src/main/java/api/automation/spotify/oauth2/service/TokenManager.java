@@ -1,4 +1,4 @@
-package api.automation.spotify.oauth2.api;
+package api.automation.spotify.oauth2.service;
 
 import api.automation.spotify.oauth2.util.ConfigLoader;
 import io.restassured.response.Response;
@@ -14,13 +14,15 @@ public class TokenManager {
     public static String getToken() {
         try {
             if (accessToken == null || Instant.now().isAfter(expiryTime)) {
-                Response response = renewToken();
-                accessToken = response.path("access_token");
-                int expiryDurationInSeconds = response.path("expires_in");
-                expiryTime = Instant.now().plusSeconds(expiryDurationInSeconds);
+                synchronized (TokenManager.class) {
+                    Response response = renewToken();
+                    accessToken = response.path("access_token");
+                    int expiryDurationInSeconds = response.path("expires_in");
+                    expiryTime = Instant.now().plusSeconds(expiryDurationInSeconds);
+                }
             }
         } catch (Exception e) {
-            throw new RuntimeException("Failed to get token.");
+            throw new RuntimeException("Failed to get token.", e);
         }
         return accessToken;
     }

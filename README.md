@@ -29,11 +29,14 @@ documentation: https://developer.spotify.com/documentation/general/guides/author
   - client_id = from p.2
   - client_secret = from p.2
 
-p.s.<br>
-mvn clean test <br>
+P.S.<br>
+mvn clean test -DBASE_URI="https://api.spotify.com" -DACCOUNT_BASE_URI="https://accounts.spotify.com" <br>
+mvn clean test -Dtest=PlaylistTest -DBASE_URI="https://api.spotify.com" -DACCOUNT_BASE_URI="https://accounts.spotify.com" <br>
 allure serve target/allure-results <br>
 *POJO classes creator: https://www.jsonschema2pojo.org/ <br>
 *Lombok docs: https://projectlombok.org/ <br>
 *Allure docs: https://docs.qameta.io/allure-report/ <br>
+https://maven.apache.org/surefire/maven-surefire-plugin/examples/testng.html <br>
 https://github.com/allure-framework/allure-java <br>
-https://github.com/rest-assured/rest-assured/wiki
+https://github.com/rest-assured/rest-assured/wiki <br>
+https://github.com/Dius/java-faker

@@ -1,4 +1,4 @@
-package api.automation.spotify.oauth2.api;
+package api.automation.spotify.oauth2.util;
 
 public class Route {
     public static final String BASE_PATH = "/v1";
