@@ -13,7 +13,7 @@ public enum StatusCode {
         this.code = code;
         this.message = message;
     }
-//
+
 //    public int getStatusCode() {
 //        return statusCode;
 //    }
