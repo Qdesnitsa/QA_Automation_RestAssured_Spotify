@@ -40,3 +40,11 @@ https://maven.apache.org/surefire/maven-surefire-plugin/examples/testng.html <br
 https://github.com/allure-framework/allure-java <br>
 https://github.com/rest-assured/rest-assured/wiki <br>
 https://github.com/Dius/java-faker
+
+#### Jenkins -> Build Triggers:
+option: GitHub hook trigger for GITScm polling <br>
+github.com -> repository_name -> settings -> webhooks -> Add webhook: <br>
+get payload URL from https://ngrok.com/ <br>
+Payload URL: https://ce6e-46-53-253-249.eu.ngrok.io/github-webhooks/ <br>
+Content type: application/json <br>
+Which events would you like to trigger this webhook? Just the push event. <br>
